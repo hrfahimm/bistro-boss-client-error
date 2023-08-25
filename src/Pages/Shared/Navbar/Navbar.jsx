@@ -1,35 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
    const navOption = (
       <>
          <li>
-            <a>Item 1</a>
-         </li>
-         <li tabIndex={0}>
-            <details>
-               <summary>Parent</summary>
-               <ul className='p-2'>
-                  <li>
-                     <a>Submenu 1</a>
-                  </li>
-                  <li>
-                     <a>Submenu 2</a>
-                  </li>
-               </ul>
-            </details>
+            <Link to='/'>Home</Link>
          </li>
          <li>
-            <a>Item 3</a>
+            <Link to='/menu'>Menu</Link>
+         </li>
+         <li>
+            <Link to='/order/salad'>Order</Link>
          </li>
       </>
    );
    return (
       <>
-         <div className='navbar fixed z-10 bg-opacity-30 bg-black max-w-screen-xl text-white'>
+         <div className='navbar fixed z-10 bg-opacity-50 rounded bg-black max-w-screen-xl uppercase text-white'>
             <div className='navbar-start'>
                <div className='dropdown'>
-                  <label tabIndex={0} className='btn btn-ghost lg:hidden'>
+                  <label tabIndex={0} className='btn btn-ghost lg:hidden '>
                      <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-5 w-5'
@@ -50,10 +41,10 @@ const Navbar = () => {
                      {navOption}
                   </ul>
                </div>
-               <a className='btn btn-ghost normal-case text-xl'>
+               <Link to='/' className='btn btn-ghost normal-case text-xl'>
                   BISTRO{' '}
                   <span className='italic text-xs text-black font-extrabold'>Boss</span>{' '}
-               </a>
+               </Link>
             </div>
             <div className='navbar-center hidden lg:flex'>
                <ul className='menu menu-horizontal px-1'>{navOption}</ul>
