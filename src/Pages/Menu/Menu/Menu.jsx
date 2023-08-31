@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Cover from '../../Shared/Cover/Cover';
 import menuImg from '../../../assets/reservation/category-pizza.jpg';
@@ -31,9 +30,9 @@ const Menu = () => {
          <MenuCatagori items={offered}></MenuCatagori>
          {/* ALL  ------  Item */}
          <MenuCatagori items={dessert} title='deasute' img={deasuteImg}></MenuCatagori>
-         <MenuCatagori items={pizza} title='pizzza' img={pizzaImg}></MenuCatagori>
-         <MenuCatagori items={salad} title='salad' img={saladImg}></MenuCatagori>
-         <MenuCatagori items={soup} title='soup' img={soupImg}></MenuCatagori>
+         <MenuCatagori items={pizza} title={'pizza'} img={pizzaImg}></MenuCatagori>
+         <MenuCatagori items={salad} title={'salad'} img={saladImg}></MenuCatagori>
+         <MenuCatagori items={soup} title={'soup'} img={soupImg}></MenuCatagori>
       </div>
    );
 };

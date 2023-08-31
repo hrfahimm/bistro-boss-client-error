@@ -10,11 +10,11 @@ const Cover = ({ img, title }) => {
          height='50px'
          maxWidth='75px'
          opacity='.5'
-         className='rounded'>
+         className='rounded  '>
          <div className='hero rounded h-[600px]'>
             <div className='hero-overlay bg-opacity-40'></div>
             <div className='hero-content text-center text-neutral-content'>
-               <div className='max-w-md'>
+               <div className='max-w-md  '>
                   <h1 className='mb-5 text-5xl font-bold uppercase'> {title}</h1>
                   <p className='mb-5'>
                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda

@@ -49,10 +49,10 @@ const Order = () => {
                <OrderTab items={soup}></OrderTab>
             </TabPanel>
             <TabPanel>
-               <OrderTab items={drinks}></OrderTab>
+               <OrderTab items={dessert }></OrderTab>
             </TabPanel>
             <TabPanel>
-               <OrderTab items={dessert}></OrderTab>
+               <OrderTab items={drinks}></OrderTab>
             </TabPanel>
          </Tabs>
       </div>
