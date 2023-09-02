@@ -185,3 +185,5 @@ export default SignUp;
 //                         </Link>
 //                      </small>
 //                   </p>
+//                      </small>
+//                   </p>
