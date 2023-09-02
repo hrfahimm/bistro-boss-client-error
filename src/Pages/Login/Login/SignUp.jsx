@@ -173,3 +173,15 @@ const SignUp = () => {
 export default SignUp;
 
 //!1Qqaser
+
+///
+
+// className='text-center  p-4  font-bold '>
+//                      <small>
+//                         I have An Account
+//                         <Link to='/login'>
+//                            {' '}
+//                            <span className='text-red-700 px-2 '>Login !</span>
+//                         </Link>
+//                      </small>
+//                   </p>
