@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import useCart from '../../../Hooks/UseCart';
-import { FaTrashAlt } from 'react-icons/fa';
-import Swal from 'sweetalert2';
+import { Helmet } from "react-helmet-async";
+import useCart from "../../../Hooks/UseCart";
+import { FaTrashAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -11,22 +11,22 @@ const MyCart = () => {
 
   const handleDelete = (item) => {
     Swal.fire({
-      title: 'Are you sure?',
-      icon: 'warning',
+      title: "Are you sure?",
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: '  Delete',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "  Delete",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/carts/${item._id}`, {
-          method: 'DELETE',
+          method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
               refetch();
-              Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });
       }
@@ -70,7 +70,10 @@ const MyCart = () => {
                   <td>{index + 1}</td>
                   <td>
                     <div className='flex items-center avatar mask mask-squircle w-12 h-12 '>
-                      <img src={item.image} alt=' ' />
+                      <img
+                        src={item.image}
+                        alt=' '
+                      />
                     </div>
                   </td>
                   <td className='font-bold'>{item.name}</td>

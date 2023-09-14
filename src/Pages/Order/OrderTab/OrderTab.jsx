@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import FoodCard from '../../../Components/FoodCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 //import { Pagination } from 'swiper';
