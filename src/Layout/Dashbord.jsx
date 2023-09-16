@@ -16,11 +16,13 @@ import {
 } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import useCart from "../Hooks/UseCart";
+import UseAdmin from "../Hooks/UseAdmin";
 
 const Dashbord = () => {
   const [cart] = useCart();
   // todo : load admin data
-  const isAdmin = true;
+  //const isAdmin = true;
+  const [isAdmin] = UseAdmin();
 
   const sideOption = (
     <div>
@@ -54,6 +56,13 @@ const Dashbord = () => {
             <Link to='/dashboard/allusers'>
               <FaUsers />
               All Users
+            </Link>
+          </li>
+          <li>
+            <Link to='/dashboard/mycart'>
+              <FaShoppingCart />
+              My Cart
+              <span className='outline-1 px-2 rounded font-bold '>+{cart?.length || 0}</span>
             </Link>
           </li>
         </>
